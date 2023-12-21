@@ -50,8 +50,11 @@ const (
 	OPAQUE
 	// JOBS is used to denote that the embedded message contains a list of job structures
 	JOBS
-	// IDLE is used to notify the Agent that server has no tasks and that the Agent should idle
+	// IDLE is used to notify the Agent that the server has no tasks and that the Agent should idle
 	IDLE
+	// KEYEXCHANGE is used to exchange encryption keys between the Agent and the server
+	// This Type is used with Mythic's HTTP profile
+	KEYEXCHANGE
 )
 
 // Base is the root, or outermost, message structure
@@ -115,6 +118,8 @@ func (t Type) String() string {
 		return "OPAQUE"
 	case IDLE:
 		return "Idle"
+	case KEYEXCHANGE:
+		return "KeyExchange"
 	default:
 		return fmt.Sprintf("Invalid: %d", t)
 	}

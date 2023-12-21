@@ -144,3 +144,34 @@ func (t Type) String() string {
 		return "UNDEFINED"
 	}
 }
+
+// IntToType converts an integer to a Type
+// Used with third-party clients to convert to a Merlin message
+func IntToType(job int) Type {
+	switch job {
+	case 0:
+		return UNDEFINED
+	case 1:
+		return CMD
+	case 2:
+		return CONTROL
+	case 3:
+		return SHELLCODE
+	case 4:
+		return NATIVE
+	case 5:
+		return FILETRANSFER
+	case 6:
+		return OK
+	case 7:
+		return MODULE
+	case 8:
+		return SOCKS
+	case 9:
+		return RESULT
+	case 10:
+		return AGENTINFO
+	default:
+		return UNDEFINED
+	}
+}
