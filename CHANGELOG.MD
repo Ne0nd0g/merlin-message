@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added in the RSA package to exchange RSA keys between the agent and the server
 - Added `KEYEXCHANGE` constant to the list of message types
 - Added `IntToType` function to convert an integer to a Merlin message type
+- Added Qodana configuration and baseline files
 
 ## 1.2.0 - 2023-10-29
 
