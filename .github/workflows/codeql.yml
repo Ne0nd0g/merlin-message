@@ -14,9 +14,25 @@ name: "CodeQL"
 on:
   push:
     branches: [ "dev", "Default" ]
+    paths-ignore:
+      - '.github/**'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'CHANGELOG.MD'
+      - 'LICENSE'
+      - 'qodana.*'
+      - 'README.MD'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "dev" ]
+    paths-ignore:
+      - '.github/**'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'CHANGELOG.MD'
+      - 'LICENSE'
+      - 'qodana.*'
+      - 'README.MD'
   schedule:
     - cron: '40 17 * * 6'
 
