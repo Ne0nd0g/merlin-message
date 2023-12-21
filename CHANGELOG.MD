@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `IntToType` function to convert an integer to a Merlin message type
 - Added Qodana configuration and baseline files
 
+### Changed
+
+- Upgraded `github.com/google/uuid` to `v1.5.0`
+
 ## 1.2.0 - 2023-10-29
 
 ### Changed
